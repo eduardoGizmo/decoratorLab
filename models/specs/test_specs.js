@@ -76,7 +76,15 @@ describe('room', function () {
         const actual = decorator.stock.length;
         assert.strictEqual( actual, 1)
       });
+
+      it('it should be able to count litres of paint in stock', function () {
+        decorator.addCan(can);
+        const actual = decorator.countLitres();
+        assert.strictEqual(actual, 25)
+      });
+
     });
+
 
 
   });
